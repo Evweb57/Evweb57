@@ -14,12 +14,18 @@
   --dark: #0e1111;
 }
 
+/*==============================================================================
+  Beacause I set the default font size to 20px I can now use percentages to increase and decrease font size based on that.
+  Text-rendering is new to me, it appears to communicate priority to the browser
+==============================================================================*/
+
+
 html {
   background-color: var(--cafe-blanco);
   color: var(--dark);
   font-family: 'Playfair Display', serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
 }
 
@@ -33,7 +39,7 @@ html {
 ==============================================================================*/
 
 header {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url(../img/front_page.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/front_page.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -52,5 +58,42 @@ header {
 }
 
 h1 {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  word-spacing: 4px;
+}
+
+/*==============================================================================
+  Used the link selector to set the default btn appearance to be the same as a visited, this get's rid of that ugly purple.
+  You can apply transitions to multiple styles.
+  The hover and active selectors can be applied to show an effect such as a color change, this is why I added a transistion so it wasn't as jarring
+  https://www.w3schools.com/w3css/w3css_buttons.asp
+  https://www.webfx.com/blog/web-design/ghost-buttons/
+==============================================================================*/
+
+.btn:link, .btn:visited {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 150px;
+  border: 1px solid var(--coffee);
+  transition: background-color 0.2s, border 0.2s;
+  margin-right: 15px;
+}
+
+.btn-filled:link, .btn-filled:visited {
+  background-color: var(--coffee);
+}
+
+
+.btn:hover, .btn:active {
+  background-color: var(--dark);
+  border: 1px solid var(--dark);
 }
