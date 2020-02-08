@@ -1,6 +1,16 @@
 # github.io
 
 /*==============================================================================
+  MVP -
+==============================================================================*/
+
+Use AJAX to make a request to an external data source like OMDBapi and insert some of the data retrieved into the DOM
+
+Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc)
+
+Have one or more complex user interface modules such as a carousel, drag and drop, a sticky nav, tooltips, etc**
+
+/*==============================================================================
   Resources -
 ==============================================================================*/
 
@@ -32,3 +42,7 @@
   Ceramic : #CDCDC0
   Latte: #DDBC95
   Coffee: #B38867
+
+  Responsive Grid System
+  ----------
+  Included a file to allow the RGS
