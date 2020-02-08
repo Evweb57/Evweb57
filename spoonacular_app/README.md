@@ -47,3 +47,4 @@ Have one or more complex user interface modules such as a carousel, drag and dro
   Responsive Grid System
   ----------
   Included a file to allow the RGS
+  Included a file suggested by RGS called Normalize, need to check with instructors on use
