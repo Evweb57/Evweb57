@@ -37,11 +37,12 @@ Have one or more complex user interface modules such as a carousel, drag and dro
 
   Colors
   ----------
-  Cafe Blanco: #E6E0D4
+  Ivory: #c0cac7
   Slate : #626D71
   Ceramic : #CDCDC0
   Latte: #DDBC95
   Coffee: #B38867
+  Dark: #0e1111
 
   Responsive Grid System
   ----------

@@ -1,3 +1,24 @@
 * {
   border: 1px solid gold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ivory: #c0cac7;
+  --slate: #626D71;
+  --ceramic: #CDCDC0;
+  --latte: #DDBC95;
+  --coffee: #B38867;
+  --dark: #0e1111;
+}
+
+html {
+  background-color: var(--cafe-blanco);
+  color: var(--dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
