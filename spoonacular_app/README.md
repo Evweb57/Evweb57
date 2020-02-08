@@ -4,7 +4,7 @@
   MVP -
 ==============================================================================*/
 
-Use AJAX to make a request to an external data source like OMDBapi and insert some of the data retrieved into the DOM
+<!-- Use AJAX to make a request to an external data source like OMDBapi and insert some of the data retrieved into the DOM -->
 
 Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc)
 
