@@ -1,5 +1,5 @@
 * {
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +14,10 @@
   --dark: #0e1111;
 }
 
-/*==============================================================================
+/*=============================================================================
   Beacause I set the default font size to 20px I can now use percentages to increase and decrease font size based on that.
   Text-rendering is new to me, it appears to communicate priority to the browser
-==============================================================================*/
+=============================================================================*/
 
 
 html {
@@ -34,9 +34,9 @@ html {
   margin: 0 auto;
 }
 
-/*==============================================================================
+/*=============================================================================
   Beacause the header background-image is not a sub-directory of css it needs a reference to the root folder or it wont show up
-==============================================================================*/
+=============================================================================*/
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/front_page.jpg);
@@ -45,36 +45,134 @@ header {
   height: 100vh;
 }
 
-/*==============================================================================
+section {
+  padding: 80px 0;
+}
+
+.field {
+  padding: 1%;
+}
+
+/*=============================================================================
   Had to use the transform: translate and halve the top and left as 50% was pushing it all the way over instead of where I wanted.
-==============================================================================*/
+=============================================================================*/
 
 .header-text-box {
   position: absolute;
-  width: 1140px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 h1 {
   margin-top: 0;
   margin-bottom: 20px;
   color: #fff;
-  font-size: 240%;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: .5px;
+  font-size: 200%;
   word-spacing: 4px;
+  letter-spacing: .5px;
 }
 
-/*==============================================================================
+h2 {
+  font-size: 150%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: .5px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  background-color: var(--coffee);
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h3 {
+  color: #fff;
+  border: 1px solid var(--coffee);
+  border-radius: 150px;
+  padding: 6px;
+  font-size: 90%;
+  font-weight: 500i;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+
+
+.hook {
+  line-height: 130%;
+  width: 70%;
+  margin: 0 15%;
+  text-align: center;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 40px
+}
+
+.header-nav li {
+  margin-left: 14px;
+}
+
+.header-nav li a:link, .header-nav li a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+  padding: 6px 0;
+}
+
+.header-nav li a:hover, .header-nav li a:active {
+  border-bottom: 1px solid var(--coffee);
+
+}
+
+/*=============================================================================
   Used the link selector to set the default btn appearance to be the same as a visited, this get's rid of that ugly purple.
   You can apply transitions to multiple styles.
   The hover and active selectors can be applied to show an effect such as a color change, this is why I added a transistion so it wasn't as jarring
   https://www.w3schools.com/w3css/w3css_buttons.asp
   https://www.webfx.com/blog/web-design/ghost-buttons/
-==============================================================================*/
+=============================================================================*/
 
 .btn:link, .btn:visited {
   color: #fff;

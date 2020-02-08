@@ -15,28 +15,49 @@
   </head>
   <body>
     <header>
+      <nav>
+        <div class="row">
+          <h3>Fresh Squeeze</h3>
+          <ul class="header-nav">
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Food Search</a></li>
+            <li><a href="#">Grocery Estimator</a></li>
+          </ul>
+        </div>
+      </nav>
       <div class="header-text-box">
         <h1>Searching for a recipe?<br>Look no further.</h1>
-        <a href="#" class="btn btn-filled">Recipe Search</a>
-        <a href="#" class="btn btn-hollow">Have an allergy?</a>
+        <div class="btns">
+          <a href="#" class="btn btn-filled">Recipe Search</a>
+          <a href="#" class="btn btn-hollow">Have an allergy?</a>
+        </div>
       </div>
     </header>
     <section class="section-text-box">
       <div class="row">
         <h2>This is how it works.</h2>
-        <p>Fresh Squeeze is a search service utilizing the keywords you enter to find recipes and relevant dietary information about the what you're looking for.</p>
+        <p class="hook">Fresh Squeeze is a search service utilizing the keywords you enter to find recipes and relevant diet information about  what you are looking for.</p>
       </div>
+      <hr>
       <div class="row">
-        <div class="col span-1-of-2">
+        <div class="col span-1-of-3 field">
+          <ion-icon name="search-outline"></ion-icon>
           <h3>Food Item Search</h3>
           <p>Just include the key word or phrase that you are looking for and start searching.<br>Examples: Cheese, No Cheese, Cheese and Meat</p>
         </div>
-        <div class="col span-1-of-2">
+        <div class="col span-1-of-3 field">
+          <ion-icon name="sad-outline"></ion-icon>
           <h3>Dietery Restrictions</h3>
           <p>We make an effort to make sure our program is inclusive by allowing you to filter data by any of the registered food allergies.</p>
+        </div>
+        <div class="col span-1-of-3 field">
+          <ion-icon name="calculator-outline"></ion-icon>
+          <h3>Cost out your Recipe</h3>
+          <p>The ability to get an idea of how much your groceries are going to cost before even leaving the house lends itself to far more responsible shopping.</p>
         </div>
       </div>
     </section>
 
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   </body>
 </html>
