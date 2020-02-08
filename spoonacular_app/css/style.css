@@ -28,7 +28,29 @@ html {
   margin: 0 auto;
 }
 
+/*==============================================================================
+  Beacause the header background-image is not a sub-directory of css it needs a reference to the root folder or it wont show up
+==============================================================================*/
+
 header {
-  background-image: url(img/front_page.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url(../img/front_page.jpg);
+  background-size: cover;
+  background-position: center;
   height: 100vh;
+}
+
+/*==============================================================================
+  Had to use the transform: translate and halve the top and left as 50% was pushing it all the way over instead of where I wanted.
+==============================================================================*/
+
+.header-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  margin: 0;
 }
