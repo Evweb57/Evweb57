@@ -158,11 +158,12 @@ nav h3 {
   margin: 40px
 }
 
-.header-nav li {
+.header-nav li, .tab-list li {
   margin-left: 14px;
 }
 
-.header-nav li a:link, .header-nav li a:visited {
+.header-nav li a:link, .header-nav li a:visited,
+.tab-list li a:link, .tab-list li a:visited {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -172,7 +173,8 @@ nav h3 {
   padding: 6px 0;
 }
 
-.header-nav li a:hover, .header-nav li a:active {
+.header-nav li a:hover, .header-nav li a:active,
+.tab-list li a:hover, .tab-list li a:active {
   border-bottom: 1px solid var(--coffee);
 
 }
@@ -212,10 +214,66 @@ nav h3 {
   Used Javascript & JQuery by Jon Duckett as resource
 =============================================================================*/
 
+.section-tabs {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/food_img1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.tab-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .tab-panel {
   display: none;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: 400;
 }
 
 .tab-panel.active {
   display: block;
+}
+
+#card-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  color: var(--dark)
+}
+
+#recipe-card {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 80%;
+  padding: 20px 0;
+}
+
+#recipe-card hr {
+  margin: 8px 0;
+  margin-left: 20px;
+}
+
+.food-search {
+  margin-bottom: 20px;
+  margin: 20px;
+  text-align: left;
+}
+
+.food-description {
+  margin: 16px 20px;
+  text-align: left;
+}
+
+.search-box {
+  border-radius: 6px;
+  padding: 3px 2px;
 }

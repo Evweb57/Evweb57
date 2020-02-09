@@ -24,31 +24,34 @@ const fetchRecipe = () => {
   Tab Panel
 ==============================================================================*/
 
-$('.tab-list').each(function(){
-  var $this = $(this);
-  var $tab = $this.find('li.active');
-  var $link = $tab.find('a');
-  var $panel = $($link.attr('href'));
+const searchTabs = () => {
+  $('.tab-list').each(function(){
+    let $this = $(this);
+    let $tab = $this.find('li.active');
+    let $link = $tab.find('a');
+    let $panel = $($link.attr('href'));
 
-  $this.on('click', '.tab-control', function(e) {
-    console.log('clicked');
-    e.preventDefault();
-    var $link = $(this);
-    var id = this.hash;
+    $this.on('click', '.tab-control', function(e) {
+      console.log('clicked');
+      e.preventDefault();
+      let $link = $(this);
+      let id = this.hash;
 
-    if (id && !$link.is('.active')) {
-      $panel.removeClass('active');
-      $tab.removeClass('active');
+      if (id && !$link.is('.active')) {
+        $panel.removeClass('active');
+        $tab.removeClass('active');
 
-      $panel = $(id).addClass('active');
-      $tab = $link.parent().addClass('active');
-    }
+        $panel = $(id).addClass('active');
+        $tab = $link.parent().addClass('active');
+      }
+    });
   });
-});
+}
 
 /*==============================================================================
   Onload functions
 ==============================================================================*/
 $(() => {
   // fetchRecipe();
+  searchTabs();
 })
