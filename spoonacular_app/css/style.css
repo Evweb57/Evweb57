@@ -206,3 +206,16 @@ nav h3 {
   background-color: var(--dark);
   border: 1px solid var(--dark);
 }
+
+/*=============================================================================
+  This is my tab panel
+  Used Javascript & JQuery by Jon Duckett as resource
+=============================================================================*/
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
