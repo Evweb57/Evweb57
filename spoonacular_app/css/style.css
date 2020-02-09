@@ -130,7 +130,18 @@ nav h3 {
   margin-top: 5px;
 }
 
+.field {
+  margin-top: 20px;
+  font-size: 90%;
+  line-height: 130%;
+}
 
+.icon-size {
+  font-size: 300%;
+  display: block;
+  color: var(--coffee);
+  margin-bottom: 10px;
+}
 
 .hook {
   line-height: 130%;
