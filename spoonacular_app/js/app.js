@@ -23,6 +23,17 @@ const fetchRecipe = () => {
           $recipe.addClass('top-recipes')
           $returnItems.append($recipe)
         }
+
+/*==============================================================================
+  Need to get the id from this ajax request and add another ajax request to add the id to a search based on a click, showing up in tabs two and three.
+
+  ingredients
+  https://api.spoonacular.com/recipes/{id}/ingredientWidget.json
+
+  price
+  https://api.spoonacular.com/recipes/{id}/priceBreakdownWidget.json
+==============================================================================*/
+
         console.log("good");
         console.log(data);
       },
