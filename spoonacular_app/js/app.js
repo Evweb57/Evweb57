@@ -18,11 +18,10 @@ const fetchRecipe = () => {
         for (let i = 0; i < 10; i++) {
           let $returnItems = $('<li>')
           $('.food-description').append($returnItems)
-          $returnItems.addClass('itemContainer')
-          let $recipe = $('<a>').text(data.results[i].title)
+          $returnItems.addClass('item-container')
+          let $recipe = $('<a>').text(data.results[i].title).attr('href', '#tab-2')
           $recipe.addClass('top-recipes')
           $returnItems.append($recipe)
-          // let
         }
         console.log("good");
         console.log(data);

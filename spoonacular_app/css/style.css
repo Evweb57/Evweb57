@@ -201,7 +201,8 @@ nav h3 {
 }
 
 .header-nav li a:link, .header-nav li a:visited,
-.tab-list li a:link, .tab-list li a:visited {
+.tab-list li a:link, .tab-list li a:visited,
+.top-recipe:link, .top-recipe:visited {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -212,9 +213,13 @@ nav h3 {
 }
 
 .header-nav li a:hover, .header-nav li a:active,
-.tab-list li a:hover, .tab-list li a:active {
+.tab-list li a:hover, .tab-list li a:active,
+.top-recipes:hover, .top-recipes:active  {
   border-bottom: 1px solid var(--coffee);
+}
 
+.top-recipes:link, .top-recipes:visited {
+  color: var(--dark)
 }
 
 /*=============================================================================
@@ -317,13 +322,19 @@ nav h3 {
   padding: 3px 2px;
 }
 
-.itemContainer{
+.item-container{
   margin: 6px 0;
+  padding: 6px 0;
 }
 
-.top-recipe {
+.returnItems {
+  list-style: none;
+}
+
+.top-recipes {
   text-decoration: none;
   padding: 6px 0;
   margin: 6px 0;
-  font-size: 80%;
+  font-size: 70%;
+  font-weight: 700;
 }
