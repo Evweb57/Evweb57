@@ -15,6 +15,44 @@
 }
 
 /*=============================================================================
+  Media Queries
+  https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+  https://responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints/
+=============================================================================*/
+
+@media only screen and (max-width: 1200px) {
+  .header-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  .row {
+    padding: 0 2%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .hook {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/*=============================================================================
   Beacause I set the default font size to 20px I can now use percentages to increase and decrease font size based on that.
   Text-rendering is new to me, it appears to communicate priority to the browser
 =============================================================================*/
@@ -107,7 +145,7 @@ hr {
   display: block;
   height: 2px;
   background-color: var(--coffee);
-  width: 300px;
+  width: 70px;
   margin: 0 auto;
   margin-top: 30px;
 }
