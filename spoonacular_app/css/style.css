@@ -271,9 +271,21 @@ nav h3 {
 .food-description {
   margin: 16px 20px;
   text-align: left;
+  list-style: none;
 }
 
 .search-box {
   border-radius: 6px;
   padding: 3px 2px;
+}
+
+.itemContainer{
+  margin: 6px 0;
+}
+
+.top-recipe {
+  text-decoration: none;
+  padding: 6px 0;
+  margin: 6px 0;
+  font-size: 80%;
 }

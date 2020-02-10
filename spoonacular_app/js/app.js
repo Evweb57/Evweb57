@@ -15,8 +15,17 @@ const fetchRecipe = () => {
       url: "https://api.spoonacular.com/recipes/search?" + myApiKey + userSearch
     }).then(
       (data)=>{
-        // $('#test').html(data.)
+        for (let i = 0; i < 10; i++) {
+          let $returnItems = $('<li>')
+          $('.food-description').append($returnItems)
+          $returnItems.addClass('itemContainer')
+          let $recipe = $('<a>').text(data.results[i].title)
+          $recipe.addClass('top-recipes')
+          $returnItems.append($recipe)
+          // let
+        }
         console.log("good");
+        console.log(data);
       },
       ()=>{
         console.log('bad');
