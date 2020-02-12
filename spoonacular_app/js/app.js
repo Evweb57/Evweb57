@@ -3,6 +3,8 @@
   Setting up Spoonacular server response - f308c68870684766ae3372174c399412
 ==============================================================================*/
 const myApiKey = "apiKey=f308c68870684766ae3372174c399412";
+const recipeId = [];
+const idArray = [];
 
 const fetchRecipe = () => {
   $('form').on('submit', (event) => {
@@ -19,10 +21,21 @@ const fetchRecipe = () => {
           let $returnItems = $('<li>')
           $('.food-description').append($returnItems)
           $returnItems.addClass('item-container')
-          let $recipe = $('<a>').text(data.results[i].title).attr('href', '#tab-2')
-          $recipe.addClass('top-recipes')
+          let $recipe = $('<a>').text(data.results[i].title).attr('href', '#tab-2').on('click', fetchIngredients)
+          $recipe.addClass(`top-recipes`).addClass(`${[i]}`)
           $returnItems.append($recipe)
+          recipeId.push(data.results[i])
         }
+        console.log("good");
+        console.log(data);
+        console.log(recipeId);
+      },
+      ()=>{
+        console.log('bad');
+      }
+    );
+  })
+}
 
 /*==============================================================================
   Need to get the id from this ajax request and add another ajax request to add the id to a search based on a click, showing up in tabs two and three.
@@ -34,17 +47,30 @@ const fetchRecipe = () => {
   https://api.spoonacular.com/recipes/{id}/priceBreakdownWidget.json
 ==============================================================================*/
 
-        console.log("good");
-        console.log(data);
-      },
-      ()=>{
-        console.log('bad');
-      }
-    );
-  })
+const format = () => {
+  recipeId.forEach((item) => {
+    idArray.push(this.);
+    console.log(idArray);
+  });
 }
 
+const fetchIngredients = () => {
+  format();
+  for (let i = 0; i < recipeId.length; i++) {
+    $.ajax({
+      url: `https://api.spoonacular.com/recipes/${recipeId[i].id}/information?${myApiKey}`
+    }).then(
+      (data) => {
+        console.log(data);
+        console.log(idArray);
+      },
+      () => {
+        console.log("it is borked");
+      }
+    )
+  }
 
+}
 
 /*==============================================================================
   Tab Panel
@@ -80,4 +106,6 @@ const searchTabs = () => {
 $(() => {
   fetchRecipe();
   searchTabs();
+  // fetchIngredients()
+  // format();
 })

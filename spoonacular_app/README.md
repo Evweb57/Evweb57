@@ -8,7 +8,7 @@
 
 <!-- Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc) -->
 
-Have one or more complex user interface modules such as a carousel, drag and drop, a sticky nav, tooltips, etc**
+<!-- Have one or more complex user interface modules such as a carousel, drag and drop, a sticky nav, tooltips, etc** -->
 
 /*==============================================================================
   Resources -
