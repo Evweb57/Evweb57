@@ -4,7 +4,6 @@
 ==============================================================================*/
 const myApiKey = "apiKey=f308c68870684766ae3372174c399412";
 const recipeId = [];
-const idArray = [];
 
 const fetchRecipe = () => {
   $('form').on('submit', (event) => {
@@ -12,23 +11,23 @@ const fetchRecipe = () => {
     let selection = document.activeElement.getAttribute('value');
     const userInput = $('.search-box').val()
     const userSearch = `&query=${userInput}&number=10`;
-    console.log(userSearch);
+    // console.log(userSearch);
     const myData = $.ajax({
       url: "https://api.spoonacular.com/recipes/search?" + myApiKey + userSearch
     }).then(
       (data)=>{
         for (let i = 0; i < 10; i++) {
+          recipeId.push(data.results[i])
           let $returnItems = $('<li>')
           $('.food-description').append($returnItems)
           $returnItems.addClass('item-container')
           let $recipe = $('<a>').text(data.results[i].title).attr('href', '#tab-2').on('click', fetchIngredients)
           $recipe.addClass(`top-recipes`).addClass(`${[i]}`)
           $returnItems.append($recipe)
-          recipeId.push(data.results[i])
         }
         console.log("good");
-        console.log(data);
-        console.log(recipeId);
+        // console.log(data);
+        // console.log(recipeId);
       },
       ()=>{
         console.log('bad');
@@ -47,29 +46,19 @@ const fetchRecipe = () => {
   https://api.spoonacular.com/recipes/{id}/priceBreakdownWidget.json
 ==============================================================================*/
 
-const format = () => {
-  recipeId.forEach((item) => {
-    idArray.push(this.);
-    console.log(idArray);
-  });
-}
-
 const fetchIngredients = () => {
-  format();
   for (let i = 0; i < recipeId.length; i++) {
     $.ajax({
       url: `https://api.spoonacular.com/recipes/${recipeId[i].id}/information?${myApiKey}`
     }).then(
       (data) => {
         console.log(data);
-        console.log(idArray);
       },
       () => {
         console.log("it is borked");
       }
     )
   }
-
 }
 
 /*==============================================================================
@@ -106,6 +95,6 @@ const searchTabs = () => {
 $(() => {
   fetchRecipe();
   searchTabs();
-  // fetchIngredients()
+  fetchIngredients()
   // format();
 })

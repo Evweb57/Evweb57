@@ -342,3 +342,16 @@ nav h3 {
   font-size: 70%;
   font-weight: 700;
 }
+
+footer {
+  background-color: var(--dark);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-list {
+  list-style: none;
+  color: #fff;
+}
