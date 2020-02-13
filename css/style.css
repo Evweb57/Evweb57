@@ -265,7 +265,7 @@ nav h3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/food_img1.jpg);
   background-size: cover;
   background-position: center;
-  height: 140vh;
+  height: 100vh;
   color: #fff;
   text-align: center;
 }
