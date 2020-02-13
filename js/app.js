@@ -52,6 +52,12 @@ const fetchIngredients = () => {
       url: `https://api.spoonacular.com/recipes/${recipeId[i].id}/information?${myApiKey}`
     }).then(
       (data) => {
+        let $returnIngredients = $('<li>')
+        $('.ingredient-description').append($returnIngredients)
+        $returnIngredients.addClass('item-container')
+        let $ingredients = $('<a>').text(data.results[i].name)
+        $recipe.addClass(`top-recipes`)
+        $returnItems.append($recipe)
         console.log(data);
       },
       () => {

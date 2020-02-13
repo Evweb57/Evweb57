@@ -48,3 +48,17 @@
   ----------
   Included a file to allow the RGS
   Included a file suggested by RGS called Normalize, need to check with instructors on use
+
+/*==============================================================================
+  Information -
+==============================================================================*/
+
+  Link to live site:
+  https://evweb57.github.io/fresh_squeeze/
+
+  Unsolved problems:
+  How to add functionality to links, letting them click though to the other tab tabs.
+  Deployment issue, assuming load order of links. Not displaying across the screen as intended.
+
+  Notes for the future:
+  Pick a better API, having a direct limit on the number of calls you can make is incredibly limiting on the work that can be accomplished in a single day.
