@@ -73,21 +73,25 @@ const fetchIngredients = () => {
 
 const searchTabs = () => {
   $('.tab-list').each(function(){
-    let $this = $(this);
-    let $tab = $this.find('li.active');
-    let $link = $tab.find('a');
-    let $panel = $($link.attr('href'));
+    let $current = $(this);
+    let $tab = $current.find('li.active');
+    let $click = $tab.find('a');
+    let $panel = $($click.attr('href'));
 
     $this.on('click', '.tab-control', function(e) {
-      console.log('clicked');
+      // console.log('clicked');
       e.preventDefault();
       let $link = $(this);
+// .hash reads the href of this(clicked) and grabs the first item with the #
       let id = this.hash;
 
+// if statement that says if this $link is not active do this
+// which removes the active classes from inactive elements
       if (id && !$link.is('.active')) {
         $panel.removeClass('active');
         $tab.removeClass('active');
 
+// this clicked item is then set to active
         $panel = $(id).addClass('active');
         $tab = $link.parent().addClass('active');
       }
